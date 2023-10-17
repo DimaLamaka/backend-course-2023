@@ -1,0 +1,3 @@
+rootProject.name = 'clevertec-backend-course-2023'
+include 'unit-testing'
+
