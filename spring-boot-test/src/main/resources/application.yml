@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  gson:
+    pretty-printing: true
+directory:
+  gateway:
+    url: http://localhost:4444
+    getshortinfooffers.endpoint: /short-info-offers
+    getfullinfooffers.endpoint: /full-info-offers
+
