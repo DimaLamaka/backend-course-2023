@@ -1,0 +1,131 @@
+//quorum
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "exchange.quorum",
+  "routingKey": "queue.quorum",
+  "message": "hello from spring quorum"
+}
+
+###
+
+//direct one
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.direct",
+  "routingKey": "queue.direct1",
+  "message": "hello from spring one"
+}
+###
+
+//direct two
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.direct",
+  "routingKey": "queue.direct2",
+  "message": "hello from spring two"
+}
+###
+
+//fanout
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.fanout",
+  "routingKey": "spring.queue",
+  "message": "hello from spring all"
+}
+###
+
+//topic all
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.topic",
+  "routingKey": "queue.topic.all",
+  "message": "hello from spring all"
+}
+###
+
+//topic one
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.topic",
+  "routingKey": "queue.topic.one",
+  "message": "hello from spring 1"
+}
+###
+
+//topic two
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.topic",
+  "routingKey": "spring.topic.two",
+  "message": "hello from spring 2"
+}
+###
+
+//topic two
+POST http://localhost:8080/api/messages/publish
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.topic",
+  "routingKey": "spring.topic.two",
+  "message": "hello from spring 2"
+}
+###
+
+//header1
+POST http://localhost:8080/api/messages/publish/header
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.header",
+  "headers": {
+    "header1": "header1"
+  },
+  "message": "hello from spring header1"
+}
+###
+
+//header2
+POST http://localhost:8080/api/messages/publish/header
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.header",
+  "headers": {
+    "header10": "header10",
+    "header1": "header1"
+  },
+  "message": "hello from spring header2"
+}
+###
+
+//header3
+POST http://localhost:8080/api/messages/publish/header
+Content-Type: application/json
+
+{
+  "exchange": "spring.exchange.header",
+  "headers": {
+    "header10": "header10",
+    "header1": "header1",
+    "header2": "header2",
+    "custom": 123
+  },
+  "message": "hello from spring header3"
+}
+###

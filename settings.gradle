@@ -4,4 +4,5 @@ include 'concurrency'
 include 'spring-boot'
 include 'spring-boot-metric-starter'
 include 'spring-boot-test'
+include 'rabbitmq'
 
